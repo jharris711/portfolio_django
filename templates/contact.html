@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cloudinary %}
+{% block content %}
+{% include "components/navbar.html" with active="/contact" %}
+
+<div id="colorlib-main">
+	<div class="colorlib-contact">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<span class="heading-meta">Let's talk...</span>
+					<h2 class="colorlib-heading animate-box" data-animate-effect="fadeInLeft">Get in Touch</h2>
+				</div>
+			</div>
+			<div class="col-md">
+				<div class="row">
+					<div class="col-md-10 animate-box" data-animate-effect="fadeInLeft">
+						<div>
+							{% if messages %}
+								{% for message in messages %}
+								<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+									{{ message }}
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								{% endfor %}
+							{% endif %}
+						</div>
+						<form method="POST">
+							{% csrf_token %}
+							<div class="form-group">
+								{{ form.name }}
+							</div>
+							<div class="form-group">
+								{{ form.email }}
+							</div>
+							<div class="form-group">
+								{{ form.phone }}
+							</div>
+							<div class="form-group">
+								{{ form.subject }}
+							</div>
+							<div class="form-group">
+								{{ form.message }}
+							</div>
+							<div class="form-group">
+								<input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md">
+						<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+							<div class="colorlib-icon">
+								<i class="icon-globe-outline"></i>
+							</div>
+							<div class="colorlib-text">
+								<p><a href="mailto:js.harris711@gmail.com?subject=Let's talk about creating something together...">js.harris711@gmail.com</a></p>
+							</div>
+						</div>
+						<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+							<div class="colorlib-icon">
+								<i class="icon-map"></i>
+							</div>
+							<div class="colorlib-text">
+								<p>Silver Spring, MD 20905</p>
+							</div>
+						</div>
+						<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+							<div class="colorlib-icon">
+								<i class="icon-phone"></i>
+							</div>
+							<div class="colorlib-text">
+								<p><a href="tel://">(240) 535-2622</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

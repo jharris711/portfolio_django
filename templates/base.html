@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>J. Harris Web Dev</title>
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/png">
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png">
+    {% include "components/headlinks.html" %}
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0" nonce="lgJP1Bfc"></script>
+    <div id="colorlib-page">
+        {% block content  %}
+
+        {% endblock content %}
+    </div>
+    {% include "components/scripts.html" %}
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% load static %}
+<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+	<h1 id="colorlib-logo"><a href="/"><span>JH</span><span>WD</span></a></h1>
+	<nav id="colorlib-main-menu" role="navigation">
+		<ul>
+			<li class="{% if active == '/' %}colorlib-active{% endif %}"><a href="{% url 'core:home' %}"><strong>J. Harris Web Dev</strong></a></li>
+			<li><a href="/#about_section"><strong>About</strong></a></li>
+			<li class="{% if active == '/projects' %}colorlib-active{% endif %}"><a href="{% url 'core:projects' %}"><strong>Projects</strong></a></li>
+			<li class="{% if active == '/social-media' %}colorlib-active{% endif %}"><a href="{% url 'core:social-media' %}"><strong>Social Media</strong></a></li>
+			<li class="{% if active == '/contact' %}colorlib-active{% endif %}"><a href="/contact"><strong>Contact</strong></a></li>
+		</ul>
+	</nav>
+
+	<div class="colorlib-footer">
+		<p>
+			<small><span>This site was made with <strong>Python3/Django/PostgreSQL</strong></span></small>
+			<small><span>GitHub Repo For This Site: <a href="https://github.com/jharris711/portfolio_django" target="_blank" onmouseover="this.style='color:black;';" 
+				onmouseout="this.style='color:#F75940;';"><i class="icon-github"></i></a></span></small>
+			<small><span>J. Harris Web Dev &copy;<script>document.write(new Date().getFullYear());</script></span></small>
+			<small><span>All rights reserved </span></small>
+		</p>
+		<ul>
+			<li><a href="https://github.com/jharris711" target="_blank"><i class="icon-github"></i></a></li>
+			<li><a href="https://twitter.com/jheeeeezy" target="_blank"><i class="icon-twitter2"></i></a></li>
+			<li><a href="https://www.instagram.com/" target="_blank"><i class="icon-instagram"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/joshsharris/" target="_blank"><i class="icon-linkedin2"></i></a></li>
+		</ul>
+	</div>
+</aside>

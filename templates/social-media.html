@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cloudinary %}
+{% block content %}
+{% include "components/navbar.html" with active="/blog" %}
+
+
+<div id="colorlib-main">
+	<div class="colorlib-blog">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 col-md-pull-3">
+					<span class="heading-meta">Check Out</span>
+					<h2 class="colorlib-heading animate-box" data-animate-effect="fadeInLeft">Social Media</h2>
+					<p class="animate-box" data-animate-effect="fadeInLeft" onmouseover="style='text-decoration: underline;'" onmouseout="style='text-decoration: none;'"><a href="{% url 'core:home' %}" class="btn=download">Back To Main Page</a></p>
+				</div>
+			</div>
+			<div class="row text-center align-items-center justify-content-center">
+                <div class="col-sm-6 animate-box pt-2" data-animate-effect="fadeInLeft">
+					<h3>Facebook</h3>
+					<div class="fb-page" data-href="https://www.facebook.com/jharriswebdev/" data-tabs="timeline" data-width="500" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/jharriswebdev/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/jharriswebdev/">J. Harris Web Dev</a></blockquote></div>
+                </div>
+                <div class="col-sm-6 animate-box pt-2" data-animate-effect="fadeInLeft">
+					<h3>Twitter</h3>
+					<a class="twitter-timeline" data-width="500" data-height="400" data-theme="light" href="https://twitter.com/jheeeeezy?ref_src=twsrc%5Etfw">Tweets by jheeeeezy</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+			<div class="row mt-5 pt-4 text-center align-items-center justify-content-center">
+                <div class="col-8 animate-box" data-animate-effect="fadeInLeft">
+					<h3>Also checkout:</h3>
+					<a href="https://github.com/jharris711" 
+						target="_blank" 
+						class="pr-2" 
+						onmouseover="this.style='color:black;';" 
+						onmouseout="this.style='color:#F75940;';"
+					>
+						<i class="fab fa-github"></i> GitHub
+					</a>
+					<a href="https://stackoverflow.com/story/joshharris" 
+						target="_blank" 
+						class="pr-2"  
+						onmouseover="this.style='color:black;';" 
+						onmouseout="this.style='color:#F75940;';"
+					>
+						<i class="fab fa-stack-overflow"></i> Stack Overflow
+					</a>
+					<a href="https://www.youtube.com/channel/UCUQ-fkPVp3grr4nGWlH8ppw" 
+						target="_blank" 
+						class="pr-2"  
+						onmouseover="this.style='color:black;';" 
+						onmouseout="this.style='color:#F75940;';"
+					>
+						<i class="fab fa-youtube"></i> Youtube
+					</a>
+					<a href="https://www.linkedin.com/in/joshsharris/" 
+						target="_blank" 
+						class="pr-2"  
+						onmouseover="this.style='color:black;';" 
+						onmouseout="this.style='color:#F75940;';"
+					>
+						<i class="fab fa-linkedin-in"></i> LinkedIn
+					</a>
+                </div>
+            </div>
+		</div>
+	</div>
+<!-- ------------------------------- Contact ------------------------------- -->
+    <div id="get-in-touch" class="colorlib-bg-color">
+        <div class="colorlib-narrow-content">
+            <div class="row">
+                <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                    <h2>Get in Touch!</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+                    <p class="colorlib-lead">Send me a message. Let's see what we can create together.</p>
+                    <p><a href="{% url 'core:contact' %}" class="btn btn-primary btn-learn">Contact me!</a></p>
+                </div>		
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

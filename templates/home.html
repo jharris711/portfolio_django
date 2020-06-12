@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cloudinary %}
+{%  block content %}
+{% include "components/navbar.html" with active="/"  %}
+
+<div id="colorlib-main">
+<!-- ------------------------------- Landing ------------------------------- -->
+    <aside  id="colorlib-hero" class="js-fullheight">
+        <div class="flexslider js-fullheight">
+            <ul class="slides">
+                <li style="background-image: url({% static 'images/comp3.jpeg' %});">
+                    <div class="overlay"></div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 col-md-pull-2 js-fullheight slider-text">
+                                <div class="slider-text-inner">
+                                    <div class="desc">
+                                        <h1>J. Harris Web Development</h1>
+                                        <h2>Custom web and software solutions that are perfect for you. </h2>
+                                    <p><a href="#about_section" class="btn btn-primary btn-learn">Learn More<i class="icon-arrow-right3"></i></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </li>
+                <li style="background-image: url({% static 'images/sketch1.jpeg' %});">
+                    <div class="overlay"></div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 col-md-pull-2 js-fullheight slider-text">
+                                <div class="slider-text-inner">
+                                    <div class="desc">
+                                        <h1>Build Great Things</h1>
+                                        <h2>Rich interactive web applications, small business sites, and more. <a href=""></a></h2>
+                                        <p>
+                                            <a href="/contact" class="btn btn-primary btn-learn">
+                                                <i class="far fa-envelope"></i> 
+                                                Let's talk 
+                                                <i class="icon-arrow-right3"></i>
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li style="background-image: url({% static 'images/comp1.jpeg' %});">
+                    <div class="overlay"></div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 col-md-pull-2 js-fullheight slider-text">
+                                <div class="slider-text-inner">
+                                    <div class="desc">
+                                        <h1>Custom Sites and Web Applications</h1>
+                                    <h2><i class="fab fa-python"></i> <i class="fab fa-js-square"></i> <i class="fab fa-node"></i> <i class="fab fa-react"></i> <i class="fab fa-sass"></i> <i class="fab fa-bootstrap"></i> <i class="fab fa-unity"></i></h2>
+                                    <p><a href="#work_section" class="btn btn-primary btn-learn">Learn More<i class="icon-arrow-right3"></i></a></p>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </aside>
+<!-- ------------------------------- Landing ------------------------------- -->
+
+<!-- -------------------------------- About -------------------------------- -->
+    <div id="about_section" class="colorlib-about">
+        <a name="about_section"></a>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="about-img animate-box" data-animate-effect="fadeInLeft" style="background-image: url({% static 'images/code1.jpeg' %});">
+                        <div class="about-img-2 animate-box" data-animate-effect="fadeInRight" style="background-image: url({% static 'images/josh.jpg' %}); background-position: fill;"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                    <div class="about-desc">
+                        <span class="heading-meta">J. Harris Web Dev</span>
+                        <h3>Hello! My name is Josh Harris!</h3>
+                        <p>I am an <strong>web, app, and software developer</strong> based in the <strong>Washington, DC</strong>-Metro Area. <strong>Responsive web apps</strong>, <strong>interactive bots</strong>, 
+                            <strong>browser extensions</strong>... Whatever you need, I'll <strong>design and develop</strong> it. 
+                        </p>
+                    </div>
+                    <div class="fancy-collapse-panel">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Why choose me?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p>I am a <strong>full stack web and software developer</strong>, which means <strong>creative solutions for complex problems</strong>. Do you wish someone 
+                                                    could <strong>clean-up, debug, and test your code</strong> ? Need a <strong>solid code-slinger</strong> or a <strong>designer</strong> with a <strong>clever, modern eye</strong>? 
+                                                    Want a <strong>complex, multi-functional bot programmer</strong>? I'm your guy. Let's <strong>create something great</strong>.
+                                                </p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>I like to keep up <strong>current and emerging technologies</strong>. My favorite languages to work with are Python and JavaScript, but I can also craft with Golang, C#, Lua, and more. Currently, I am <strong>creating my own Python 3 tutorial</strong> 
+                                                    series, available via YouTube.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">What I do?
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        <p>
+                                            I have a <strong>passion for coding</strong>, whether it's <strong>front-end design</strong> or <strong>managing complex databases</strong>. I'm great at utilizing both <strong>Python/Django/SQL</strong> and 
+                                            <strong>MERN-Stack</strong> technologies and methodologies to build <strong>rich, responsive web apps</strong>, using <strong>Python/Requests/Selenium</strong> to build <strong>interactive scraping and testing bots</strong>, and <strong>game development</strong> with <strong>Unity/C#</strong> and <strong>Roblox/Lua</strong>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">My Specialties
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li><strong>Python 3</strong> scraper and bot creation</li>
+                                            <li><strong>Django/SQL</strong> and <strong>MERN-Stack</strong> web applications</li>
+                                            <li>Data visualizations with <strong>D3.js</strong></li>
+                                            <li>Automated site and application testing with <strong>Selenium</strong></li>
+                                        </ul>	
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -------------------------------- About -------------------------------- -->
+
+<!-- -------------------------------- Work --------------------------------- -->
+    <div  class="colorlib-work">
+        <div id="work_section" class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-md-pull-3">
+                    <span class="heading-meta">My Work</span>
+                    <h2 class="colorlib-heading animate-box" data-animate-effect="fadeInLeft" style="margin-bottom: 20px; padding-bottom: 0px;">Recent Work</h2>
+                    <h5 class="lead hover animate-box" data-animate-effect="fadeInLeft"><a style="padding: 0; margin: 0;" href="/work">More Projects...</a></h5>
+                </div>
+            </div>
+            <div class="row">
+                {% for project in projects %}
+                <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                    <div class="project">
+                        {% cloudinary project.image.public_id class="d-block w-100" %}
+                        <div class="desc">
+                            <div class="con">
+                                <h3><a onmouseover="style='color: grey;'" onmouseout="style='color: white;'" href="{{ project.get_absolute_url }}">{{ project.title }}</a></h3>
+                                <span>{{ project.description }}</span>
+                                <br>
+                                <span style="text-decoration: underline;">Built with:</span>
+                                <span>{{ project.techs }}</span>
+                                <span><a href="{{ project.github}}" style="color: white;" onmouseover="style='color: grey;'" onmouseout="style='color: white;'"><strong><i class="fab fa-github-square"></i> GitHub</strong></a></span>
+                                <span><a href="{{ project.url}}" style="color: white;" onmouseover="style='color: grey;'" onmouseout="style='color: white;'"><strong><i class="far fa-paper-plane"></i> Project Page</strong></a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+<!-- -------------------------------- Work --------------------------------- -->
+
+<!-- -------------------------------- Blog --------------------------------- -->
+    <div id="blog_section" class="colorlib-blog">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-md-pull-3">
+                    <span class="heading-meta">Read</span>
+                    <h2 class="colorlib-heading animate-box" data-animate-effect="fadeInLeft"  style="margin-bottom: 20px; padding-bottom: 0px;">Social Media</h2>
+                    <h5 style="padding: 0, 0, 10px, 0; margin: 10px auto; position: relative; display: flex; bottom: 15px;" class="lead hover animate-box" data-animate-effect="fadeInLeft"><a href="/blog">See more...</a></h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                    <div class="fb-page" data-href="https://www.facebook.com/jharriswebdev/" data-tabs="timeline" data-width="" data-height="100" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/jharriswebdev/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/jharriswebdev/">J. Harris Web Dev</a></blockquote></div>
+                </div>
+                <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                    <a class="twitter-timeline" data-width="220" data-height="200" data-theme="light" href="https://twitter.com/jheeeeezy?ref_src=twsrc%5Etfw">Tweets by jheeeeezy</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -------------------------------- Blog --------------------------------- -->
+
+<!-- ------------------------------- Contact ------------------------------- -->
+    <div id="get-in-touch" class="colorlib-bg-color">
+        <div class="colorlib-narrow-content">
+            <div class="row">
+                <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                    <h2>Get in Touch!</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+                    <p class="colorlib-lead">Send me a message. Let's see what we can create together.</p>
+                    <p><a href="{% url 'core:contact' %}" class="btn btn-primary btn-learn">Contact me!</a></p>
+                </div>		
+            </div>
+        </div>
+    </div>
+<!-- ------------------------------- Contact ------------------------------- -->
+
+</div>
+
+
+{% endblock %}
